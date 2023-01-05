@@ -1,0 +1,306 @@
+.ys-page-editor {
+	margin: 10px;
+    margin-top: 100px;
+	padding-top: 3px;
+    padding-bottom: 360px;
+	background: var(--ys-white);
+	min-height: 1200px;
+}
+
+
+/*Кнопка що додає елементи*/
+.ys-add-element {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    min-width: 150px;
+    opacity: 0.1;
+    transition: all 3s;
+    justify-content: center;
+    align-items: center;
+}
+.ys-add-element:hover {
+    opacity: 1;
+    transition: all 1s;
+}
+.ys-add-element i{
+	font-size: 26px;
+    z-index: 3;
+    position: absolute;
+    background: var(--ys-white);
+    color: var(--ys-black);
+    border-radius: 13px;
+}
+.ys-add-element span{
+	border: 1px solid var(--ys-black);
+    width: 60%;
+    display: block;
+    margin: 15px auto;
+}
+
+
+
+/*Блонк редактора*/
+.ys-element {
+	border-top: 3px solid var(--ys-blue);
+    padding: 0;
+}
+.ys-html-el {
+
+}
+
+.ys-el-panel-top{
+	display: flex;
+    justify-content: space-between;
+    background: var(--ys-blue-light);
+    color: var(--ys-black);
+    padding: 3px 0;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+}
+
+.ys-el-panel-top .ys-close-panel, .ys-el-panel-top p{
+	font-size: 26px;
+    padding: 0 10px;
+    margin: 0;
+}
+.ys-close-panel:hover {
+	color: var(--ys-blue);
+	cursor: pointer;
+}
+
+.ys-bloc {
+	display: flex;
+    justify-content: space-evenly;
+}
+.ys-edit {
+	border-top: 3px solid var(--ys-blue);
+	border-bottom: 3px solid var(--ys-white);
+	border-left: 3px solid var(--ys-white);
+	border-right: 3px solid var(--ys-white);
+}
+.ys-edit:hover {
+	border: 3px dashed var(--ys-blue);
+}
+
+
+/*Контейнер модальних вікон та панелів*/
+.ys-panel-w {position: relative;}
+
+
+/*Панель елементів*/
+.ys-add-element-panel {
+    display: none;
+    user-select: none;
+    border: 1px solid var(--ys-blue);
+    background: var(--ys-glass);
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    width: 60%;
+    min-height: 100px;
+    border-radius: 5px;
+    z-index: 9;
+    box-shadow: 8px 8px 9px var(--ys-gray);
+    transition: all 1s;
+}
+.ys-add-element-panel:hover {
+    background: var(--ys-white);
+}
+.ys-add-element-panel ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.ys-add-element-panel-header {
+    padding: 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ys-blue);
+    background: linear-gradient(0deg, var(--ys-blue-light) 0%, var(--ys-white) 10%, var(--ys-white) 100%);
+    transition: all 2s;
+}
+.ys-add-element-panel-header:hover{
+    background: linear-gradient(0deg, var(--ys-blue-light) 0%, var(--ys-white) 90%, var(--ys-white) 100%);
+}
+.ys-add-element-panel-header h3, .ys-add-element-panel-header i{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    transition: all 1s;
+}
+
+
+
+
+
+
+/* Панель загрузки фпйлів */
+
+.ys-add-image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    background: var(--ys-black-glass);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    user-select: none;
+}
+.ys-add-image-panel {
+    width: 80%;
+    height: 80%;
+    background: var(--ys-white);
+    border-radius: 3px;
+}
+
+#ys-element-image-panel-b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: overlay;
+}
+#ys-element-image-panel-b ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-right: 17px;
+}
+
+#ys-element-image-panel-b  li{
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: var(--ys-gray);
+}
+
+#ys-element-image-panel-b  img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid var(--ys-white);
+    border-radius: 6px;
+    transition: all 2s;
+}
+
+#ys-element-image-panel-b  img:hover {
+    cursor: pointer;
+    border: 5px solid var(--ys-blue);
+    transition: all 0.2s;
+}
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+.ys-text {
+    min-width: 200px;
+    min-height: 20px;
+}
+.ys-button {
+    min-width: 200px;
+    min-height: 20px;
+    display: inline-block;
+}
+.ys-text:focus-visible,  .ys-button:focus-visible{
+    outline: none;
+}
+
+
+
+.ys-but {
+    display: flex;
+    align-items: center;
+    position: relative;
+	border: 1px solid var(--ys-white);
+	transition: all 1s;
+}
+.ys-but:hover{
+    background: var(--ys-blue);
+    background: linear-gradient(215deg, var(--ys-blue-light) 0%, var(--ys-white) 100%);
+	border: 1px solid var(--ys-blue);
+}
+
+/*.ys-but {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}*/
+
+.ys-but[data-title]:hover::after {
+    min-width: 200px;
+    background: var(--ys-blue);
+    background: linear-gradient(115deg, var(--ys-blue-light) 0%, var(--ys-white) 100%);
+    padding: 10px;
+    border-radius: 3px;
+    content: attr(data-title);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    font-size: 16px;
+    z-index: 11;
+}
+
+.ys-but i{
+	font-size: 25px;
+    padding: 10px;
+	transition: all 1s;
+}
+.ys-but i:hover {
+	color: var(--ys-blue);
+	cursor: pointer;
+}
+
+.ys-classIn i:hover{
+    color: var(--ys-black);
+    cursor: auto;
+}
+
+.ys-but input{
+	height: 25px;
+    border: 0;
+    outline: none;
+    width: 150px;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#ys-color {
+	width: 25px;
+    cursor: pointer;
+}
+#ys-background {
+    width: 25px;
+    cursor: pointer;
+}
+
+
+#ys-page-editor ul, #ys-page-editor ol {
+    padding-left: 40px;
+} 
+
+#ys-page-editor ul li {
+	list-style: outside;
+}
+#ys-page-editor ol li {
+	list-style: auto;
+}
