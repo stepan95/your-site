@@ -1,0 +1,89 @@
+
+#ys-menu-editor {
+    text-align: center;
+    padding-bottom: 300px;
+}
+
+.ys-menu {
+
+}
+
+.menu-item {
+	background: var(--ys-blue-light);
+    margin: 10px;
+    padding: 10px;
+    width: 700px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 8px 8px 9px var(--ys-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: all 1s;
+}
+.menu-item:hover {
+    background: var(--ys-white);
+    box-shadow: 8px 8px 9px var(--ys-blue);
+}
+
+.menu-item i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--ys-black);
+    font-size: 16px;
+    user-select: none;
+    transition: all 1s;
+}
+
+.menu-item i:hover {
+    color: var(--ys-blue);
+    cursor: pointer;
+}
+
+
+select, input{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 2s;
+    border-bottom: 2px solid var(--ys-blue-light);
+}
+
+select:focus-visible,  input:focus-visible {
+    outline: none;
+    border-bottom: 2px solid var(--ys-blue);
+}
+
+input {
+    width: 100%;
+}
+
+select {
+    user-select: none;
+    min-width: 150px;
+}
+
+option {
+
+}
+
+.level-two {
+    margin-left: 60px;
+}
+.level-three {
+    margin-left: 120px;
+}
+
+.insertion-zone{
+    margin-bottom: 60px;
+}
+
+
+#ys-add-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
